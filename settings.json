@@ -1,0 +1,178 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(make:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
+      "Bash(ls:*)",
+      "Bash(pwd)",
+      "Bash(which:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(python3 -m http.server:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rtty/.vibecraft/hooks/vibecraft-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "printf '\\033[34m%s@%s\\033[0m %s %%' \"$(whoami)\" \"$(hostname)\" \"${PWD/#$HOME/~}\"",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "clangd-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Searching for Ainu gold",
+      "Painting",
+      "Looking for ways to kill the sun",
+      "Searching for artifacts",
+      "Waiting for Ragnarok",
+      "Chilling with Apocalypse",
+      "Preventing everyone's tragedies",
+      "Negating your vision of justice",
+      "Zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "Suffering for the past 455.4 billion years",
+      "Trying to kill myself",
+      "Fighting my idiot son",
+      "I have a mouth but I cannot scream",
+      "Trying to :q out of my suit",
+      "Let me cook",
+      "Planting my foot into god's face",
+      "Hiding in my suit of armour",
+      "I see",
+      "There's absolutely no way that you will succeed",
+      "Repair this you filthy casual",
+      "Sick! Just sick",
+      "The sun burns my skin",
+      "I can't win in 一二三紅綠燈",
+      "Killing your pull out game",
+      "It keeps coming out",
+      "Never change",
+      "I swear upon all that is just",
+      "...",
+      "Idoling",
+      "Pumping iron",
+      "Making xiaolongbao",
+      "Can't touch this",
+      "Drinking under cherry blossoms",
+      "You thought there was thermite in the tower, but it was actually me",
+      "Punching artifacts",
+      "The main character always shows up late",
+      "To you, from me",
+      "More religious solicitors?",
+      "Watching my granddaughter grow up",
+      "404",
+      "First prize, don't avoid me now"
+    ]
+  },
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1753986745038
+  }
+}

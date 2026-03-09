@@ -1,0 +1,32 @@
+# Conversation history & session data
+history.jsonl
+projects/
+debug/
+file-history/
+session-env/
+shell-snapshots/
+paste-cache/
+plans/
+todos/
+tasks/
+ide/
+
+# Telemetry & analytics
+statsig/
+telemetry/
+stats-cache.json
+
+# Plugins (re-downloadable, contains local paths)
+plugins/
+
+# Caches
+cache/
+
+# Auto memory (personal context)
+memory/
+
+# Backup files
+*.backup-*
+
+# Project-specific notes
+TASK.md
